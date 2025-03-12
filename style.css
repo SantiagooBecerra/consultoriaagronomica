@@ -167,7 +167,7 @@ body, html {
 
 /* Servicios Banner */
 #services {
-    background-image: url(/images/fondo_services.jpg);
+    background-image: url(./images/fondo_services.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
