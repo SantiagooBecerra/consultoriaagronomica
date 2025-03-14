@@ -156,7 +156,6 @@ body, html {
 #about-us h3 {
     position: relative;
     top: -30px; /* Ajusta según necesidad */    
-    margin-bottom: 20px;
     font-size: 90px;
     font-family: "Bebas Neue", serif;
 }
