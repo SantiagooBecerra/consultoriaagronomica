@@ -133,6 +133,7 @@ body, html {
   }
 .text-container p {
     font-family: 'Lato', sans-serif;
+    animation: fadeIn 2s forwards;
 }
 
 .d-item {
