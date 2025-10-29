@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.logo-container {
+    position: relative;
+    width: 90px; /* Ajusta el tamaño */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+}
+
+.logo {
+    width: 100%;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.logo-primary {
+    position: relative;
+    z-index: 2;
+}
+
+/* Inicialmente, el segundo logo está en la misma posición que el primero y oculto */
+.logo-secondary {
+    position: absolute;
+    left: 0;
+    opacity: 0; /* Invisible al inicio */
+    transform: translateX(0); /* En la misma posición del principal */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Al pasar el cursor, el segundo logo aparece y se desliza a la derecha */
+.logo-container:hover .logo-secondary {
+    opacity: 1; /* Se hace visible con fade-in */
+    transform: translateX(110%); /* Se desplaza hacia la derecha */
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: rgb(41, 70, 53);;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del offcanvas para dispositivos móviles */
+.offcanvas {
+    background-color: rgb(41, 70, 53) !important; /* Igual que el navbar */
+    color: white; /* Texto blanco */
+}
+
+/* Estilo de los enlaces dentro del offcanvas */
+.offcanvas .nav-link {
+    color: white !important; /* Igual que los enlaces del navbar */
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hover para los enlaces en el offcanvas */
+.offcanvas .nav-link:hover {
+    color: rgb(105, 165, 130) !important; /* Color de hover */
+}
+
+/* Botón de cierre del offcanvas */
+.offcanvas .navbar-toggler {
+    color: rgb(110, 207, 151);
+}
+
+.nav-link {
+    font-weight: 600;
+    color: rgb(93, 160, 121);
+    font-family: 'poppins', sans-serif;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* Dropdown */
+.dropdown>.dropdown-menu {
+background-color: rgb(41, 70, 53);;
+border: none;
+color: rgb(255, 255, 255);
+font-family: 'poppins', sans-serif;
+}
+/* Estilo de los enlaces dentro del dropdown */
+.dropdown-item {
+color: #d4d4d4 !important; /* Gris medio claro */
+font-weight: 600 !important;
+font-family: 'Poppins', sans-serif;
+}
+
+/* Hover para los enlaces del dropdown */
+.dropdown-item:hover {
+    color: rgb(118, 182, 144) !important; /* Verde suave */
+    background-color: rgb(46, 73, 58) !important; /* Verde más oscuro */
+
+}
+
+/* Iconos */
+.lni-grid-alt {
+    font-size: 2rem;
+}
+
+.lni-grid-circle {
+    font-size: 2.5rem;
+}
+
+/* Estilo de los enlaces dentro del dropdown */
+.dropdown-item {
+    color: #b0b0b0 !important; /* Gris medio claro */
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hover para los enlaces del dropdown */
+.dropdown-item:hover {
+    color: rgb(100, 179, 133) !important; /* Color de hover */
+    background-color: rgb(54, 87, 68); /* Fondo al pasar el cursor */
+}
+ 
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 992px) {
+    .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown.show .dropdown-menu {
+        display: block;
+    }
+}
+/* Banner */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.text-container h1 {
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 2s forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.text-container p {
+    font-family: 'Lato', sans-serif;
+    animation: fadeIn 2s forwards;
+}
+
+
+
+.d-item {
+    height: 500px;
+}
+
+.d-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+/* Personaliza los indicadores del carrusel */
+.carousel-indicators [data-bs-target] {
+    width: 40px;           /* Largo de la línea */
+    height: 6px;           /* Grosor de la línea */
+    border-radius: 4px;    /* Bordes redondeados */
+    background-color: #b17154 !important; /* Verde oscuro */
+    margin: 0 6px;         /* Espacio entre líneas */
+    opacity: 0.5;          /* Transparencia para los inactivos */
+    transition: opacity 0.3s;
+    border: none;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #eca17e; /* Verde más claro para el activo */
+}
+/*quienes somos*/
+#about-us {
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+#about-us h3 {
+    position: relative;
+    top: -30px; /* Ajusta según necesidad */    
+    font-size: 90px;
+    font-family: "Bebas Neue", serif;
+}
+
+#about-us p {
+    margin-bottom: 30px;
+}
+
+#about-us button {
+    background-color: #02cf8b; 
+    color: white;
+    padding: 8px 18px; 
+    font-size: 18px; 
+    font-family: "Alata", sans-serif;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+    margin-bottom: 50PX;
+    border: none;
+  }
+  
+  #about-us button:hover {
+    background-color: #058888; 
+    color: white; 
+  }
+
+
+/* Cartas de Misión, Visión y Valores estilo flip */
+.flip-card {
+    background: transparent;
+    width: 100%;
+    max-width: 320px;
+    height: 340px;
+    perspective: 1000px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.flip-card:hover {
+    transform: scale(1.07);
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(.4,2,.3,1);
+    transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    font-family: 'Bebas Neue', 'Poppins', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.flip-card-front {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+    font-size: 1.2rem;
+    padding: 30px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Colores personalizados */
+.card-mision {
+    background: #e74c3c;
+}
+.card-vision {
+    background: #229954;
+}
+.card-valores {
+    background: #f4d03f;
+    color: #222;
+}
+.flip-card-front.card-valores,
+.flip-card-back.card-valores {
+    color: #222;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .flip-card {
+        max-width: 95vw;
+        height: 220px;
+        font-size: 1.1rem;
+    }
+    .flip-card-front, .flip-card-back {
+        font-size: 1.1rem;
+    }
+}
+/* Servicios Banner */
+#services {
+    background-image: url(./images/fondo_services.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
+}
+
+#services h3 {
+    color: white;
+    font-family: "Bebas Neue", serif;
+    font-size: 90px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: inline-block; /* Ajusta el fondo al tamaño del texto */
+    padding: 10px 20px; /* Reduce el espacio alrededor del texto */
+}
+
+/* Quita el fondo turquesa solo para las cartas de servicios que usan solo imagen */
+#services .card {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+    background-color: rgb(203, 253, 245) !important;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card button {
+    background-color: #2c7065;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/*contacto*/
+/* Alinear la información de contacto verticalmente con el formulario */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    height: 100%; /* Asegura que ocupa toda la altura disponible */
+}
+
+/* Estilos para cada ítem */
+.contact-info p {
+    background-color: #e6f5e6; /* Verde claro */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para los íconos */
+.contact-info i {
+    margin-right: 10px;
+    color: #27ae60; /* Verde oscuro */
+}
+
+/* Asegurar que los enlaces sean visibles */
+.contact-info a {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustar el espaciado en móviles */
+@media (max-width: 767px) {
+    .contact-info p {
+        font-size: 14px;
+    }
+}
+
+
+/*footer*/
+#footer {
+width: 100%;
+}
+
+.tank-footer-29-main {
+background-color: rgb(41, 70, 53);
+padding: 40px 0;
+width: 100%;
+max-width: 100%;
+color: white;
+font-family: 'Poppins', sans-serif;
+text-align: center;
+margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+.footer-29 .main-social-footer-35 a {
+color: white;
+font-size: 24px;
+margin: 0 10px;
+display: inline-block;
+transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-29 .main-social-footer-35 a:hover {
+transform: scale(1.2);
+}
+
+.copy-footer-29 {
+margin: 0;
+font-size: 14px;
+}
+
+.copy-footer-29 a {
+color: #A3D9A5; /* Verde suave */
+text-decoration: none;
+font-weight: bold;
+}
+
+.copy-footer-29 a:hover {
+text-decoration: underline;
+}
+
+/* -----------------------------------------------------------------------------------------------------*/
+/* botones desplegables */
+.dropdown-container {
+    text-align: center;
+    margin-bottom: 30px; /* Aumenta el espacio entre los botones */
+}
+
+.dropdown-btn {
+    background-color: #296b0f;
+    color: white;
+    padding: 12px 50px !important;
+    font-size: 30px;
+    font-family: "Poppins", serif;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    position: relative; /* Añadido para posicionar el icono */
+}
+
+.dropdown-btn .icon {
+    position: absolute;
+    right: 20px; /* Ajusta según sea necesario */
+    margin-left: 10px; /* Añade espacio entre el texto y el icono */
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-btn:hover {
+    transform: scale(1.05);
+}
+
+.dropdown-btn.active .icon {
+    transform: rotate(180deg); /* Rota el icono 180 grados */
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 0 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-in-out, padding 0.5s;
+}
+
+.dropdown-content p {
+    margin: 15px 0;
+}
+
+.show {
+    max-height: none; /* Permite que el contenido se ajuste automáticamente */
+    padding: 15px;
+    transition: max-height 0.5s ease-in-out, padding 0.5s;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+/* -----------------------------------------------------------------------------------------------------*/
+/* MAPA INTERACTIVO */
+.map-container h3{
+    font-family: "Bebas Neue", serif;
+    color: #233f58;
+    font-size: 90px;
+}
+.map-container iframe{
+    text-align: center;
+    border-radius: 8px;
+    padding: 0 10%;
+}
+.map-container h5{
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+}
+
+/* Divider */
+.divider {
+    border: 0;
+    height: 3px;
+    background: #233f58; /* Color de la línea */
+    margin: 20px auto; /* Espaciado arriba y abajo de la línea, centrado horizontalmente */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+}
+
+/* Decoraciones internas de las cartas */
+.card-decor {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+}
+.card-dot {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+.card-circle {
+    width: 22px;
+    height: 22px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+    opacity: 0.8;
+}
+.card-x {
+    width: 18px;
+    height: 18px;
+}
+.card-x::before, .card-x::after {
+    content: '';
+    position: absolute;
+    left: 8px; top: 0;
+    width: 3px; height: 18px;
+}
+
+/* Mantener proporción y evitar deformación */
+.service-img-card {
+    /* ...existing code... */
+    transition: transform 350ms cubic-bezier(.25,.8,.25,1);
+    transform-origin: center center;
+    will-change: transform;
+}
+
+.service-img-card:hover {
+    /* escala más suave y menos intensa */
+    transform: scale(1.03);
+}
+
+/* Si la imagen también recibe transform, animarla suavemente */
+.service-img-card img {
+    transition: transform 350ms cubic-bezier(.25,.8,.25,1);
+}
+
+/* Evita conflictos con reglas globales .card:hover dentro de la sección servicios */
+#services .card:hover {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* En móviles no fijar altura y mostrar la imagen completa */
+@media (max-width: 767px) {
+    .service-img-card img {
+        height: auto !important;
+        object-fit: contain; /* evita recortes y deformaciones en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoría Agronómica - Greendrone</title>
+    <link rel="icon" href="/images/logo2.png">
+    <link rel="stylesheet" href="services.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS de Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <!-- JS de Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <style type="text/css" media="all">
+/* Banner */
+.banner-greendrone {
+    background-color: #1a4739;
+    padding: 50px 20px;
+}
+
+/* Botón con animación */
+.hover-outline-btn {
+    position: relative;
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    background: #1a4739;
+    color: #ebc898;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.4s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hover-outline-btn span {
+    position: absolute;
+    background: #9af6db; /* Contorno animado */
+    transition: 0.6s ease;
+}
+
+/* Estilo para la imagen */
+.styled-logo {
+margin-top: 20px; /* Espacio entre el botón y la imagen */
+width: 80%; /* Ajusta el ancho de la imagen */
+max-width: 300px; /* Tamaño máximo */
+height: auto; /* Mantiene la proporción */
+display: block; /* Asegura que esté en una nueva línea */
+margin-left: auto;
+margin-right: auto; /* Centra la imagen */
+border-radius: 15px; /* Bordes redondeados */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Bordes animados de la imagen*/
+.image-wrapper .border {
+position: absolute;
+background: #0d3d2b; /* Verde oscuro */
+transition: transform 0.4s ease;
+z-index: 1;
+}
+
+/* Botón "Más info" */
+.more-info-btn {
+position: absolute;
+bottom: 15px;
+left: 50%;
+transform: translateX(-50%) translateY(20px);
+opacity: 0;
+background-color: #1a4739; /* Verde oscuro */
+color: white;
+padding: 8px 20px;
+border-radius: 5px;
+text-decoration: none;
+font-weight: 600;
+transition: opacity 0.5s ease, transform 0.5s ease;
+z-index: 2;
+}
+
+ .dropdown-btn{
+    background-color: #0f6b4f;
+ }
+    
+ .dropdown-btn:hover{
+   background-color: #159b73;
+}
+.dropdown-content{
+    background-color: #8bfddb;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg py-4 py-lg-0 shadow" id="navbar"> 
+        <div class="container px-4"> 
+            <!-- Contenedor de logos -->
+            <div class="logo-container">
+                <img src="images/logo1.png" class="logo logo-primary" alt="Logo principal">
+                <img src="images/logo2.png" class="logo logo-secondary" alt="Logo alternativo">
+            </div>
+    
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar" aria-controls="top-navbar"> 
+                <i class="lni lni-grid-alt"></i> 
+            </button> 
+    
+            <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="top-navbar" aria-labelledby="top-navbarLabel" style="background-color: #d5faff;">
+                <div class="d-flex justify-content-between p-3">
+                    <button class="navbar-toggler border-0" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <i class="lni lni-cross-circle"></i>
+                    </button>
+                </div>
+                <ul class="navbar-nav mb-2 ms-lg-auto p-4 p-lg-0">
+                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="#navbar">Inicio</a></li>
+                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="#about-us">Nosotros</a></li>
+                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="ganaderia.html">Ganadería</a></li>
+                            <li><a class="dropdown-item" href="agricultura.html">Agricultura</a></li>
+                            <li><a class="dropdown-item" href="greendrone.html">Green Drone</a></li>
+                            <li><a class="dropdown-item" href="gestion.html">Gestión</a></li>
+                            <li><a class="dropdown-item" href="bosquenat.html">Bosque Nativo</a></li>
+                            <li><a class="dropdown-item" href="gestionambiental.html">Gestión ambiental</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="#map-interactive">Mapa Interactivo</a></li>
+                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div> 
+    </nav>
+
+
+    <main>
+        <section class="banner-greendrone mb-4">
+            <div class="content-container">
+                <!-- Contenedor de texto -->
+                <div class="text-container">
+                    <h1>SERVICIOS <br> GREENDRONE</h1>
+                    <button class="hover-outline-btn" onclick="location.href='#servicio-1'">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Ver más ↓
+                    </button>
+                </div>
+
+                <!-- Contenedor de imagen -->
+                <div class="image-container">
+                    <img src="/images/3.png" alt="Drone sobre campo">
+                </div>
+
+              
+            </div>
+              <!-- Imagen de empresas GreenDrone -->
+            <div class="row justify-content-center my-4">
+                <div class="col-12 text-center">
+                    <img src="/images/empresas_greendrone.png" alt="Empresas GreenDrone" class="styled-logo">
+                </div>
+            </div>
+        </section>
+
+        <section class="servicios">
+            <div class="container-fluid">
+        
+                <!-- Servicio 1 -->
+                <div class="row align-items-center" id="servicio-1">
+                    <div class="col-md-6 text-center d-none d-md-block">
+                        <div class="image-wrapper">
+                            <span class="border top"></span>
+                            <span class="border right"></span>
+                            <span class="border bottom"></span>
+                            <span class="border left"></span>
+                            <img src="/images/model-dig-elev.jpg" alt="Imagen descriptiva" class="img-fluid">
+                            <a href="index.html#contacto" class="more-info-btn">Más info</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <h3>Modelos digitales de elevación</h3>
+                        <p>
+                            Un mapa de altimetría representa la elevación del terreno mediante curvas de nivel y valores de cota. Este tipo de herramienta es especialmente útil a nivel predial. Con un dron de ajuste centimétrico y con el software correspondiente, nuestros mapeos ofrecen excelentes soluciones al estudio y análisis de casos particulares en los que conocer alturas, cotas y pendientes es clave.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="divider d-none d-md-block">
+
+        
+                <!-- Servicio 2 -->
+                <div class="row align-items-center servicio-2">
+                    <div class="col-md-6 d-none d-md-block">
+                        <h3>Mapas de alta resolución para aplicaciones selectivas</h3>
+                        <p>
+                            Con un dron que tiene la capacidad de recopilar información de una escena con un ancho de banda estrecho y una alta frecuencia de muestreo, nuestro equipo técnico ofrece mapas de prescripciones para utilizarse en drones y pulverizadoras terrestres. Somos la solución a la eficiencia en el uso de agroquímicos, nuestra tecnología permite la aplicación puntual y planificada de principios activos efectivos para cada caso en particular.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center d-none d-md-block">
+                        <div class="image-wrapper">
+                            <span class="border top"></span>
+                            <span class="border right"></span>
+                            <span class="border bottom"></span>
+                            <span class="border left"></span>
+                            <img src="/images/map-alt-res.jpg" alt="Imagen descriptiva" class="img-fluid">
+                            <a href="index.html#contacto" class="more-info-btn">Más info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider d-none d-md-block">
+
+        
+                <!-- Servicio 3 -->
+                <div class="row align-items-center servicio-1">
+                    <div class="col-md-6 text-center d-none d-md-block">
+                        <div class="image-wrapper">
+                            <span class="border top"></span>
+                            <span class="border right"></span>
+                            <span class="border bottom"></span>
+                            <span class="border left"></span>
+                            <img src="/images/dis-curv-niv.jpg" alt="Imagen descriptiva" class="img-fluid">
+                            <a href="index.html#contacto" class="more-info-btn">Más info</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <h3>Diseño de curvas de nivel</h3>
+                        <p>
+                            Las curvas de nivel son líneas que unen puntos de igual altitud en un mapa. Sirven para representar la forma del terreno, medir alturas y pendientes, y registrar la ubicación de montañas, valles, llanuras, entre otros. <br>
+                            Usos: <br>
+                            → Topografía: Se utilizan para crear mapas topográficos de alta precisión.  <br>
+                            → Agricultura: Se utilizan para proteger el suelo de la erosión y conservar su fertilidad. <br>
+                            → Arquitectura, ingeniería e investigación científica: Se utilizan para analizar la elevación de un punto o la pendiente entre dos puntos.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="divider d-none d-md-block">
+
+        
+                <!-- Servicio 4 -->
+                <div class="row align-items-center servicio-2">
+                    <div class="col-md-6 d-none d-md-block">
+                        <h3>Fotografías aéreas 2D o 3D</h3>
+                        <p>
+                            Las fotografías aéreas 2D o 3D, se obtienen mediante fotogrametría, una técnica que analiza imágenes para crear modelos tridimensionales. <br>
+                            ¿Cómo se obtienen? <br>
+                            → Se toman fotografías aéreas con drones desde diferentes ángulos y posiciones. <br>
+                            → Las fotografías se procesan con software para medir distancias entre puntos del terreno. <br>
+                            → Se comparan las fotografías para generar modelos 3D.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center d-none d-md-block">
+                        <div class="image-wrapper">
+                            <span class="border top"></span>
+                            <span class="border right"></span>
+                            <span class="border bottom"></span>
+                            <span class="border left"></span>
+                            <img src="/images/fot-2d-3d.jpg" alt="Imagen descriptiva" class="img-fluid">
+                            <a href="index.html#contacto" class="more-info-btn">Más info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider d-none d-md-block">
+
+        
+                <!-- Servicio 5 -->
+                <div class="row align-items-center servicio-1">
+                    <div class="col-md-6 text-center d-none d-md-block">
+                        <div class="image-wrapper">
+                            <span class="border top"></span>
+                            <span class="border right"></span>
+                            <span class="border bottom"></span>
+                            <span class="border left"></span>
+                            <img src="/images/capt-datos-rgb.jpg" alt="Imagen descriptiva" class="img-fluid">
+                            <a href="index.html#contacto" class="more-info-btn">Más info</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <h3>Captura de datos con cámaras RGB o multiespectrales</h3>
+                        <p>
+                            La captura de datos mediante cámaras RGB y multiespectrales es una técnica utilizada en diversas aplicaciones, como la agricultura de precisión, el monitoreo ambiental y la cartografía. <br>
+                            → Cámaras RGB: Capturan imágenes en el espectro visible (rojo, verde y azul), proporcionando información similar a la percepción humana. Son útiles para generar mapas de alta resolución, evaluar el estado general de los cultivos y detectar anomalías visibles. <br>
+                            → Cámaras multiespectrales: Capturan información en varias bandas del espectro electromagnético, incluyendo el infrarrojo cercano. Esto permite detectar estrés hídrico, evaluar la salud vegetal mediante índices como el NDVI y diferenciar tipos de cobertura del suelo con mayor precisión.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="divider d-none d-md-block">
+
+        
+                <!-- Servicio 6 -->
+                <div class="row align-items-center servicio-2">
+                    <div class="col-md-6 d-none d-md-block">
+                        <h3>Pulverizaciones aéreas</h3>
+                        <p>
+                            Nuestro dron DJI Agras tiene la capacidad de realizar pulverizaciones homogéneas mediante una tecnología innovadora. Con el podemos ingresar a terrenos difíciles por irregularidad en el terreno o presencia árboles. Además, somos una alternativa para ingresar a tratar cultivos sin pisar, actuar selectivamente o trabajar en cabeceras u otras necesidades puntuales, brindamos soluciones a problemáticas históricas en la agroganadería nacional.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center d-none d-md-block">
+                        <div class="image-wrapper">
+                            <span class="border top"></span>
+                            <span class="border right"></span>
+                            <span class="border bottom"></span>
+                            <span class="border left"></span>
+                            <img src="/images/pulv-aereas.jpg" alt="Imagen descriptiva" class="img-fluid">
+                            <a href="index.html#contacto" class="more-info-btn">Más info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider d-none d-md-block">
+
+        
+                <!-- Servicio 7 -->
+                <div class="row align-items-center servicio-1">
+                    <div class="col-md-6 text-center d-none d-md-block">
+                        <div class="image-wrapper">
+                            <span class="border top"></span>
+                            <span class="border right"></span>
+                            <span class="border bottom"></span>
+                            <span class="border left"></span>
+                            <img src="/images/siemb-aerea.jpg" alt="Imagen descriptiva" class="img-fluid">
+                            <a href="index.html#contacto" class="more-info-btn">Más info</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <h3>Fertilizaciones y siembras aéreas</h3>
+                        <p>
+                            Con nuestro dron DJI Agras podemos realizar dispersiones de sólidos, siendo fertilizantes o semillas esparcidas cuando las condiciones reales lo requieren. Podemos desarrollar cultivos de cobertura, implantar verdeos o forrajeras, siendo una excelente alternativa para la estabilización de médanos, desarrollo de pasturas y proteger el suelo efectivamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+       </section>
+
+
+       <section class="services">
+        <div class="container d-block d-md-none">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6 col-lg-6 mb-4 dropdown-container">      
+                    <button class="dropdown-btn w-100" onclick="toggleDropdown(this)"> <b>Modelos digitales de elevación</b><i class="fas fa-chevron-down icon"></i></button>
+                    <div class="dropdown-content">
+                        <p>Un mapa de altimetría representa la elevación del terreno mediante curvas de nivel y valores de cota. Este tipo de herramienta es especialmente útil a nivel predial. Con un dron de ajuste centimétrico y con el software correspondiente, nuestros mapeos ofrecen excelentes soluciones al estudio y análisis de casos particulares en los que conocer alturas, cotas y pendientes el clave. </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4 dropdown-container">
+                    <button class="dropdown-btn w-100" onclick="toggleDropdown(this)"> <b>Mapas de alta resolución para aplicaciones selectivas</b><i class="fas fa-chevron-down icon"></i></button>
+                    <div class="dropdown-content">
+                        <p>Con un dron que tiene la capacidad de recopilar información de una escena con un ancho de banda estrecho y una alta frecuencia de muestreo, nuestro equipo técnico ofrece mapas de prescripciones para utilizarse en drones y pulverizadoras terrestres. Somos la solución a la eficiencia en el uso de agroquímicos, nuestra tecnología permite la aplicación puntual y planificada de principios activos efectivos para cada caso en particular.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4 dropdown-container">
+                    <button class="dropdown-btn w-100" onclick="toggleDropdown(this)"><b>Diseño de curvas de nivel</b><i class="fas fa-chevron-down icon"></i></button>
+                    <div class="dropdown-content">
+                        <p>Las curvas de nivel son líneas que unen puntos de igual altitud en un mapa. Sirven para representar la forma del terreno, medir alturas y pendientes, y registrar la ubicación de montañas, valles, llanuras, entre otros. 
+                            Usos:
+                            -Topografía: Se utilizan para crear mapas topográficos de alta precisión. 
+                            -Agricultura: Se utilizan para proteger el suelo de la erosión y conservar su fertilidad. 
+                            -Arquitectura, ingeniería e investigación científica: Se utilizan para analizar la elevación de un punto o la pendiente entre dos puntos.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4 dropdown-container">
+                    <button class="dropdown-btn w-100" onclick="toggleDropdown(this)"><b>Fotografías aéreas 2D o 3D</b><i class="fas fa-chevron-down icon"></i></button>
+                    <div class="dropdown-content">
+                        <p>Las fotografías aéreas 2D o 3D, se obtienen mediante fotogrametría, una técnica que analiza imágenes para crear modelos tridimensionales. 
+                            ¿Cómo se obtienen? 
+                            Se toman fotografías aéreas con drones desde diferentes ángulos y posiciones.
+                            Las fotografías se procesan con software para medir distancias entre puntos del terreno.
+                            Se comparan las fotografías para generar modelos 3D.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4 dropdown-container">
+                    <button class="dropdown-btn w-100" onclick="toggleDropdown(this)"><b>Captura de datos con cámaras RGB o multiespectrales</b><i class="fas fa-chevron-down icon"></i></button>
+                    <div class="dropdown-content">
+                        <p>La captura de datos mediante cámaras RGB y multiespectrales es una técnica utilizada en diversas aplicaciones, como la agricultura de precisión, el monitoreo ambiental y la cartografía.
+                            Cámaras RGB: Capturan imágenes en el espectro visible (rojo, verde y azul), proporcionando información similar a la percepción humana. Son útiles para generar mapas de alta resolución, evaluar el estado general de los cultivos y detectar anomalías visibles.
+                            Cámaras multiespectrales: Capturan información en varias bandas del espectro electromagnético, incluyendo el infrarrojo cercano. Esto permite detectar estrés hídrico, evaluar la salud vegetal mediante índices como el NDVI y diferenciar tipos de cobertura del suelo con mayor precisión.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4 dropdown-container">
+                    <button class="dropdown-btn w-100" onclick="toggleDropdown(this)"><b>Pulverizaciones aéreas</b><i class="fas fa-chevron-down icon"></i></button>
+                    <div class="dropdown-content">
+                        <p>Nuestro dron DJI Agras tiene la capacidad de realizar pulverizaciones homogéneas mediante una tecnología innovadora. Con el podemos ingresar a terrenos difíciles por irregularidad en el terreno o presencia árboles. Además, somos una alternativa para ingresar a tratar cultivos sin pisar, actuar selectivamente o trabajar en cabeceras u otras necesidades puntuales, brindamos soluciones a problemáticas históricas en la agroganadería nacional.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4 dropdown-container">
+                    <button class="dropdown-btn w-100" onclick="toggleDropdown(this)"><b>Fertilizaciones y siembras aéreas</b><i class="fas fa-chevron-down icon"></i></button>
+                    <div class="dropdown-content">
+                        <p>Con nuestro dron DJI Agras podemos realizar dispersiones de sólidos, siendo fertilizantes o semillas esparcidas cuando las condiciones reales lo requieren. Podemos desarrollar cultivos de cobertura, implantar verdeos o forrajeras, siendo una excelente alternativa para la estabilización de médanos, desarrollo de pasturas y proteger el suelo efectivamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
+    </main>
+
+<!--footer-->
+<section class="tank-footer-29-main " id="footer">
+    <div class="footer-29 text-center">
+        <div class="container">
+            <div class="main-social-footer-35">
+                <a href="https://wa.me/+5492657719499" class="whatsapp" title="Contact us on WhatsApp"><i class='fab fa-whatsapp'></i></a>
+                <a href="mailto:consultoriaagronomicavm@gmail.com" title="Email us at consultoriaagronomicavm@gmail.com"><i class='fab fa-google'></i></a>
+                <a href="https://www.facebook.com/rodrigo.becerra.921/" title="Visit our Facebook page"><i class='fab fa-facebook'></i></a>
+                <a href="https://www.instagram.com/consultoriaagronomica_?igsh=ZjlpcWxvajM3Mmhw" class="instagram" title="Visit our Instagram page"><i class='fab fa-instagram'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-copies text-center">
+        <p class="copy-footer-29">&copy; 2025 <a href="#navbar"> Consultoría Agronómica</a></p>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+    function toggleDropdown(button) {
+        var content = button.nextElementSibling; // Obtiene el div de contenido después del botón
+        content.classList.toggle("show");
+        button.classList.toggle("active"); // Añade o quita la clase active al botón
+    }
+</script>
+</body>
+</html>

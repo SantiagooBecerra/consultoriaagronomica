@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoría Agronómica - Agricultura</title>
+    <link rel="icon" href="/images/logo1.png">
+    <link rel="stylesheet" href="services.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS de Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <!-- JS de Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <style type="text/css" media="all">
+      
+
+/* Banner */
+.banner-greendrone {
+    background-color: #363636;
+    padding: 50px 20px;
+}
+
+.text-container h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 90px;
+    line-height: 1.2;
+}
+
+/* Botón con animación */
+.hover-outline-btn {
+    position: relative;
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    background: #363636;
+    color: #ebc898;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.4s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.hover-outline-btn:hover {
+    color: #ffe5c0 !important;
+}
+
+.hover-outline-btn span {
+    position: absolute;
+    background: #d1cece!important; /* Contorno animado */
+    transition: 0.6s ease;
+}
+/* Bordes animados */
+.image-wrapper .border {
+position: absolute;
+background: #4e4025; /* azul oscuro */
+transition: transform 0.4s ease;
+z-index: 1;
+}
+.more-info-btn {
+position: absolute;
+bottom: 15px;
+left: 50%;
+transform: translateX(-50%) translateY(20px);
+opacity: 0;
+background-color: #363636; /* azul claro oscuro */
+color: white;
+padding: 8px 20px;
+border-radius: 5px;
+text-decoration: none;
+font-weight: 600;
+transition: opacity 0.5s ease, transform 0.5s ease;
+z-index: 2;
+}
+
+ .dropdown-btn{
+    background-color: #292929;
+ }
+    
+ .dropdown-btn:hover{
+   background-color: #444444;
+}
+.dropdown-content{
+    background-color: #e0dada;
+}
+
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg py-4 py-lg-0 shadow" id="navbar"> 
+        <div class="container px-4"> 
+            <!-- Contenedor de logos -->
+            <div class="logo-container">
+                <img src="images/logo1.png" class="logo logo-primary" alt="Logo principal">
+                <img src="images/logo2.png" class="logo logo-secondary" alt="Logo alternativo">
+            </div>
+    
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar" aria-controls="top-navbar"> 
+                <i class="lni lni-grid-alt"></i> 
+            </button> 
+    
+            <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="top-navbar" aria-labelledby="top-navbarLabel" style="background-color: #d5faff;">
+                <div class="d-flex justify-content-between p-3">
+                    <button class="navbar-toggler border-0" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <i class="lni lni-cross-circle"></i>
+                    </button>
+                </div>
+                <ul class="navbar-nav mb-2 ms-lg-auto p-4 p-lg-0">
+                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="index.html#navbar">Inicio</a></li>
+                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="index.html#about-us">Nosotros</a></li>
+                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="ganaderia.html">Ganadería</a></li>
+                            <li><a class="dropdown-item" href="agricultura.html">Agricultura</a></li>
+                            <li><a class="dropdown-item" href="greendrone.html">Green Drone</a></li>
+                            <li><a class="dropdown-item" href="gestion.html">Gestión</a></li>
+                            <li><a class="dropdown-item" href="bosquenat.html">Bosque Nativo</a></li>
+                            <li><a class="dropdown-item" href="gestionambiental.html">Gestión ambiental</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="index.html#map-interactive">Mapa Interactivo</a></li>
+                    <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div> 
+    </nav>
+
+
+    <main>
+        <section class="banner-greendrone lg-mb-4">
+            <div class="content-container">
+                <!-- Contenedor de texto -->
+                <div class="text-container sm-mt-0">
+                    <h1>SERVICIOS <br> GESTIÓN AMBIENTAL</h1>
+                    <button class="hover-outline-btn" onclick="location.href='#servicio-1'">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Ver más ↓
+                    </button>
+                </div>
+
+                <!-- Contenedor de imagen -->
+                <div class="image-container sm-mb-0">
+                    <img src="/images/6.png" alt="Drone sobre campo">
+                </div>
+              
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="servicios">
+            <div class="container-fluid">
+        
+                <!-- Servicio 1 -->
+                <div class="row align-items-center servicio-1" id="servicio-1">
+                    <div class="col-md-6 text-center d-none d-md-block">
+                        <div class="image-wrapper">
+                            <span class="border top"></span>
+                            <span class="border right"></span>
+                            <span class="border bottom"></span>
+                            <span class="border left"></span>
+                            <img src="/images/ESTUDIO-IMPACTO-AMBIENYAL.jpg" alt="Imagen descriptiva" class="img-fluid">
+                            <a href="index.html#contacto" class="more-info-btn">Más info</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <h3>Estudios de impacto ambiental</h3>
+                       <p>En el marco de la LEY GENERAL DEL AMBIENTE – LEY Nº 25675, la cual establece los presupuestos mínimos para el logro de una gestión sustentable y adecuada del ambiente, la preservación y protección de la diversidad biológica y la implementación del desarrollo sustentable, nuestro equipo se desarrolla profesionalmente. Con los registros y matrículas correspondientes, nos especializamos en el diseño correcto de los proyectos y auditamos procesos de mejoras, siendo ambas instancias de vital importancia para el Desarrollo Sustentable y Sostenible de cada Proyecto de Desarrollo.
+                      </p>
+                    </div>
+                </div>
+                
+                <hr class="divider d-none d-md-block">
+                
+                <!-- Servicio 2 -->
+                <div class="row align-items-center servicio-2">
+                    <div class="col-md-6 d-none d-md-block">
+                        <h3>Gestión de certificación ambiental para proyectos de desarrollo urbanístico</h3>
+                        <p>
+                            La certificación ambiental para proyectos de desarrollo urbanístico es un proceso integral que abarca la planificación, ejecución y supervisión de las obras con el objetivo de minimizar su impacto ambiental y garantizar su sostenibilidad. Nuestro equipo de profesionales trabaja en la gestión del Certificado de Aptitud Ambiental (CAA) de cada proyecto, siendo el estudio del caso en particular intervenido por un cuerpo multidisciplinario de técnicos especializados en la materia.</p>
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center d-none d-md-block">
+                        <div class="image-wrapper">
+                            <span class="border top"></span>
+                            <span class="border right"></span>
+                            <span class="border bottom"></span>
+                            <span class="border left"></span>
+                            <img src="/images/gestión-certificación-ambiental-proyectos-urbanisticos.jpg" alt="Imagen descriptiva" class="img-fluid">
+                            <a href="index.html#contacto" class="more-info-btn">Más info</a>
+                        </div>
+                    </div>
+                </div>
+                                
+          </div>
+       </section>
+
+       <section id="services">
+        <div class="container d-block d-md-none">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6 col-lg-6 mb-4 dropdown-container">      
+                    <button class="dropdown-btn w-100" onclick="toggleDropdown(this)"> <b>Estudios de impacto ambiental</b><i class="fas fa-chevron-down icon"></i></button>
+                    <div class="dropdown-content">
+                        <p>En el marco de la LEY GENERAL DEL AMBIENTE – LEY Nº 25675, la cual establece los presupuestos mínimos para el logro de una gestión sustentable y adecuada del ambiente, la preservación y protección de la diversidad biológica y la implementación del desarrollo sustentable, nuestro equipo se desarrolla profesionalmente. Con los registros y matrículas correspondientes, nos especializamos en el diseño correcto de los proyectos y auditamos procesos de mejoras, siendo ambas instancias de vital importancia para el Desarrollo Sustentable y Sostenible de cada Proyecto de Desarrollo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4 dropdown-container">
+                    <button class="dropdown-btn w-100" onclick="toggleDropdown(this)"> <b>Gestión de certificación ambiental para proyectos de desarrollo urbanístico</b><i class="fas fa-chevron-down icon"></i></button>
+                    <div class="dropdown-content">
+                        <p> La certificación ambiental para proyectos de desarrollo urbanístico es un proceso integral que abarca la planificación, ejecución y supervisión de las obras con el objetivo de minimizar su impacto ambiental y garantizar su sostenibilidad. Nuestro equipo de profesionales trabaja en la gestión del Certificado de Aptitud Ambiental (CAA) de cada proyecto, siendo el estudio del caso en particular intervenido por un cuerpo multidisciplinario de técnicos especializados en la materia.</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+       </section>
+    </main>
+
+<!--footer-->
+<section class="tank-footer-29-main mt-3" id="footer">
+    <div class="footer-29 text-center">
+        <div class="container">
+            <div class="main-social-footer-35">
+                <a href="https://wa.me/+5492657719499" class="whatsapp" title="Contact us on WhatsApp"><i class='fab fa-whatsapp'></i></a>
+                <a href="mailto:consultoriaagronomicavm@gmail.com" title="Email us at consultoriaagronomicavm@gmail.com"><i class='fab fa-google'></i></a>
+                <a href="https://www.facebook.com/rodrigo.becerra.921/" title="Visit our Facebook page"><i class='fab fa-facebook'></i></a>
+                <a href="https://www.instagram.com/consultoriaagronomica_?igsh=ZjlpcWxvajM3Mmhw" class="instagram" title="Visit our Instagram page"><i class='fab fa-instagram'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-copies text-center">
+        <p class="copy-footer-29">&copy; 2025 <a href="#navbar"> Consultoría Agronómica</a></p>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+    function toggleDropdown(button) {
+        var content = button.nextElementSibling; // Obtiene el div de contenido después del botón
+        content.classList.toggle("show");
+        button.classList.toggle("active"); // Añade o quita la clase active al botón
+    }
+</script>
+</body>
+</html>

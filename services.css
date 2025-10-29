@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+body, html {
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+scroll-behavior: smooth;
+}
+
+.logo-container {
+position: relative;
+width: 90px; /* Ajusta el tamaño */
+height: auto;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+overflow: visible;
+}
+
+.logo {
+width: 100%;
+transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.logo-primary {
+position: relative;
+z-index: 2;
+}
+
+/* Inicialmente, el segundo logo está en la misma posición que el primero y oculto */
+.logo-secondary {
+position: absolute;
+left: 0;
+opacity: 0; /* Invisible al inicio */
+transform: translateX(0); /* En la misma posición del principal */
+transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Al pasar el cursor, el segundo logo aparece y se desliza a la derecha */
+.logo-container:hover .logo-secondary {
+opacity: 1; /* Se hace visible con fade-in */
+transform: translateX(110%); /* Se desplaza hacia la derecha */
+}
+
+/* Navbar */
+
+.navbar {
+background-color: rgb(41, 70, 53);
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del offcanvas para dispositivos móviles */
+.offcanvas {
+background-color: rgb(41, 70, 53) !important; /* Igual que el navbar */
+color: white; /* Texto blanco */
+}
+
+/* Estilo de los enlaces dentro del offcanvas */
+.offcanvas .nav-link {
+color: white !important; /* Igual que los enlaces del navbar */
+font-weight: 600;
+font-family: 'Poppins', sans-serif;
+}
+
+/* Hover para los enlaces en el offcanvas */
+.offcanvas .nav-link:hover {
+color: rgb(210, 255, 229) !important; /* Color de hover */
+}
+
+/* Botón de cierre del offcanvas */
+.offcanvas .navbar-toggler {
+color: white;
+}
+
+.nav-link {
+font-weight: 600;
+color: rgb(255, 255, 255);
+font-family: 'poppins', sans-serif;
+}
+
+.navbar-toggler:focus {
+box-shadow: none;
+}
+
+/* Dropdown */
+.dropdown>.dropdown-menu {
+background-color: rgb(41, 70, 53);;
+border: none;
+color: rgb(255, 255, 255);
+font-family: 'poppins', sans-serif;
+}
+/* Estilo de los enlaces dentro del dropdown */
+.dropdown-item {
+color: #d4d4d4 !important; /* Gris medio claro */
+font-weight: 600 !important;
+font-family: 'Poppins', sans-serif;
+}
+
+/* Hover para los enlaces del dropdown */
+.dropdown-item:hover {
+    color: rgb(118, 182, 144) !important; /* Verde suave */
+    background-color: rgb(46, 73, 58) !important; /* Verde más oscuro */
+
+}
+
+/* Iconos */
+.lni-grid-alt {
+font-size: 2rem;
+}
+
+.lni-grid-circle {
+font-size: 2.5rem;
+}
+
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 992px) {
+.dropdown-menu {
+display: none;
+}
+
+.dropdown.show .dropdown-menu {
+display: block;
+}
+}
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*banner*/
+
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contenedor de texto */
+.text-container {
+flex: 1;
+min-width: 300px;
+text-align: center;
+margin-bottom: 30px;
+margin-top: 100px; /* Ajusta la distancia desde la parte superior */
+}
+
+.text-container h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
+    color: #f9fbfb;
+    font-size: 90px;
+    line-height: 1.2;
+}
+
+
+.hover-outline-btn:hover {
+    color: white;
+}
+
+
+.hover-outline-btn span:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: -100%;
+}
+
+.hover-outline-btn span:nth-child(2) {
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    right: -100%;
+}
+
+.hover-outline-btn span:nth-child(3) {
+    width: 2px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+}
+
+.hover-outline-btn span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+}
+
+.hover-outline-btn:hover span:nth-child(1) {
+    left: 0;
+}
+
+.hover-outline-btn:hover span:nth-child(2) {
+    right: 0;
+}
+
+.hover-outline-btn:hover span:nth-child(3) {
+    bottom: 0;
+}
+
+.hover-outline-btn:hover span:nth-child(4) {
+    top: 0;
+}
+
+/* Contenedor de imagen */
+.image-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.image-container img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/*footer*/
+#footer {
+width: 100%;
+}
+
+.tank-footer-29-main {
+background-color: rgb(41, 70, 53);
+padding: 40px 0;
+width: 100%;
+max-width: 100%;
+color: white;
+font-family: 'Poppins', sans-serif;
+text-align: center;
+margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+.footer-29 .main-social-footer-35 a {
+color: white;
+font-size: 24px;
+margin: 0 10px;
+display: inline-block;
+transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-29 .main-social-footer-35 a:hover {
+transform: scale(1.2);
+}
+
+.copy-footer-29 {
+margin: 0;
+font-size: 14px;
+}
+
+.copy-footer-29 a {
+color: #A3D9A5; /* Verde suave */
+text-decoration: none;
+font-weight: bold;
+}
+
+.copy-footer-29 a:hover {
+text-decoration: underline;
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column-reverse;
+    }
+
+    .text-container h1 {
+        font-size: 70px;
+    }
+
+    .image-container img {
+        width: 70%;
+  
+    }
+   
+}
+
+/* Contenedor de la imagen con bordes animados */
+.image-wrapper {
+position: relative;
+display: inline-block;
+overflow: hidden;
+width: 100%; /* Ajusta el tamaño del contenedor */
+max-width: 400px; /* Tamaño máximo */
+margin: 0 auto; /* Centra la imagen */
+}
+
+/* Imagen */
+.image-wrapper img {
+display: block;
+width: 100%;
+height: auto;
+transition: transform 0.3s ease-in-out;
+border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+/* Hover: escala la imagen ligeramente */
+.image-wrapper:hover img {
+transform: scale(1.05);
+}
+
+
+/* Bordes horizontales */
+.image-wrapper .border.top,
+.image-wrapper .border.bottom {
+width: 100%;
+height: 4px; /* Bordes más gruesos */
+transform: scaleX(0);
+}
+
+.image-wrapper .border.top {
+top: 0;
+left: 0;
+transform-origin: left;
+}
+
+.image-wrapper .border.bottom {
+bottom: 0;
+left: 0;
+transform-origin: left;
+}
+
+/* Bordes verticales */
+.image-wrapper .border.left,
+.image-wrapper .border.right {
+width: 4px; /* Bordes más gruesos */
+height: 100%;
+transform: scaleY(0);
+}
+
+.image-wrapper .border.left {
+top: 0;
+left: 0;
+transform-origin: top;
+}
+
+.image-wrapper .border.right {
+top: 0;
+right: 0;
+transform-origin: top;
+}
+
+/* Hover: activa los bordes */
+.image-wrapper:hover .border.top,
+.image-wrapper:hover .border.bottom {
+transform: scaleX(1);
+}
+
+.image-wrapper:hover .border.left,
+.image-wrapper:hover .border.right {
+transform: scaleY(1);
+}
+
+.image-wrapper:hover .more-info-btn {
+opacity: 1;
+transform: translateX(-50%) translateY(0);
+}
+
+
+/* -----------------------------------------------------------------------------------------------------*/
+/* botones desplegables */
+.dropdown-container {
+    text-align: center;
+    margin-bottom: 30px; /* Aumenta el espacio entre los botones */
+}
+
+.dropdown-btn {
+    color: white;
+    padding: 12px 50px !important;
+    font-size: 30px;
+    font-family: "Poppins", serif;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    position: relative; /* Añadido para posicionar el icono */
+}
+
+.dropdown-btn .icon {
+    position: absolute;
+    right: 20px; /* Ajusta según sea necesario */
+    margin-left: 10px; /* Añade espacio entre el texto y el icono */
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-btn:hover {
+    transform: scale(1.05);
+}
+
+.dropdown-btn.active .icon {
+    transform: rotate(180deg); /* Rota el icono 180 grados */
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 0 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-in-out, padding 0.5s;
+}
+
+.dropdown-content p {
+    margin: 15px 0;
+}
+
+.show {
+    max-height: none; /* Permite que el contenido se ajuste automáticamente */
+    padding: 15px;
+    transition: max-height 0.5s ease-in-out, padding 0.5s;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+/* Divider */
+.divider {
+    border: 0;
+    height: 3px;
+    background: #233f58; /* Color de la línea */
+    margin: 20px auto; /* Espaciado arriba y abajo de la línea, centrado horizontalmente */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+}

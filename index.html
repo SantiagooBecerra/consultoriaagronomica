@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoría Agronómica - inicio</title>
+    <link rel="icon" href="images/logo1.png" type="images/logo.Oficial.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS de Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <!-- JS de Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <style>
+.card-x {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 16px;
+    left: 16px;
+    pointer-events: none;
+}
+.card-x::before, .card-x::after {
+    content: '';
+    position: absolute;
+    left: 8px; top: 0;
+    width: 3px; height: 18px;
+    background: #fff;
+    border-radius: 2px;
+}
+.card-x::before {
+    transform: rotate(45deg);
+}
+.card-x::after {
+    transform: rotate(-45deg);
+}
+
+/* Nuevo diseño de cartas de servicios */
+.service-img-card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 340px;
+    margin: 20px auto;
+    overflow: visible; /* No recorta la imagen */
+    /* Elimina border, background y box-shadow si hay color turquesa */
+    background: none;
+    box-shadow: none;
+}
+.service-img-card img {
+    display: block;
+    border-radius: 5px !important;
+    width: 100%;
+    height: auto; /* No recorta la imagen */
+    border-radius: 0; /* Sin esquinas redondeadas */
+}
+.service-img-card:hover {
+    transform: scale(1.04);
+}
+.service-img-card img {
+    width: 100%;
+    height: auto; /* mantiene la proporción original */
+    object-fit: cover; /* opcional: recorta para que llene sin deformarse */
+}
+
+/* Botón "Ver más" animado */
+.more-info-btn {
+    position: absolute;
+    bottom: 80px; /* <-- antes estaba en 24px */
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    background-color: #294635;
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 3;
+}
+.service-img-card:hover .more-info-btn {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .service-img-card {
+        max-width: 95vw;
+    }
+    .service-img-card img {
+        height: 180px;
+    }
+    .service-title {
+        font-size: 1.2rem;
+        padding: 8px 0 6px 0;
+    }
+}
+</style>
+</head>
+<body>
+    
+<!--header-->
+<nav class="navbar navbar-expand-lg py-4 py-lg-0 shadow" id="navbar"> 
+    <div class="container px-4"> 
+        <!-- Contenedor de logos -->
+        <div class="logo-container">
+            <img src="images/logo1.png" class="logo logo-primary" alt="Logo principal">
+            <img src="images/logo2.png" class="logo logo-secondary" alt="Logo alternativo">
+        </div>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar" aria-controls="top-navbar"> 
+            <i class="lni lni-grid-alt"></i> 
+        </button> 
+
+        <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="top-navbar" aria-labelledby="top-navbarLabel" style="background-color: #d5faff;">
+            <div class="d-flex justify-content-between p-3">
+                <button class="navbar-toggler border-0" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="lni lni-cross-circle"></i>
+                </button>
+            </div>
+            <ul class="navbar-nav mb-2 ms-lg-auto p-4 p-lg-0">
+                <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="#navbar">Inicio</a></li>
+                <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="#about-us">Nosotros</a></li>
+                <li class="nav-item px-3 px-lg-0 py-1 py-lg-4 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="ganaderia.html">Ganadería</a></li>
+                        <li><a class="dropdown-item" href="agricultura.html">Agricultura</a></li>
+                        <li><a class="dropdown-item" href="greendrone.html">Green Drone</a></li>
+                        <li><a class="dropdown-item" href="gestion.html">Gestión</a></li>
+                        <li><a class="dropdown-item" href="bosquenat.html">Bosque Nativo</a></li>
+                        <li><a class="dropdown-item" href="gestionambiental.html">Gestión ambiental</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="#map-interactive">Mapa Interactivo</a></li>
+                <li class="nav-item px-3 px-lg-0 py-1 py-lg-4"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div> 
+</nav>
+
+<!--main-->
+<main>
+    <!--banner-->
+    <div class="banner-container">
+        <div class="text-container">
+            <h1 class="display-1 fw-bolder text-uppercase text-white">Consultoría agronómica</h1>
+            <p class="fs-3 text-white" style="font-family: 'Poppins';">
+                Somos una solución tecnológica para tu campo
+            </p>
+        </div>
+
+        <!-- Carrusel de imágenes -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active d-item">
+                    <img src="./images/banner_inicio1.jpg" class="d-block w-100 d-img" alt="...">
+                </div>
+                <div class="carousel-item d-item">
+                    <img src="./images/banner_inicio2.jpg" class="d-block w-100 d-img" alt="...">
+                </div>
+                <div class="carousel-item d-item">
+                    <img src="./images/banner_inicio3.jpg" class="d-block w-100 d-img" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!--about us-->
+    <section id="about-us">
+        <div class="container">   
+            <div class="row text-center">
+                <div class="col-12">
+                    <h3>¿Quiénes somos?</h3>
+                </div>
+                <p style="font-family: 'Basic', sans; font-size: 25px;" class="mb-5">Somos un equipo de profesionales multidisciplinarios, coordinados e integrados dedicados al servicio integral agropecuario. Buscamos ofrecer a nuestros clientes un servicio diferencial y personalizado, con una larga experiencia en la región de Cuyo y equipamiento de última tecnología</p>
+            </div>
+        </div>
+            
+
+            <div class="row justify-content-center mb-5 mt-5">
+                <!-- Misión -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card-mision">
+                                <!-- Decoración X arriba a la izquierda -->
+                                <span class="card-decor card-x" style="top: 16px; left: 16px;"></span>
+                                <!-- Tres puntos arriba a la derecha -->
+                                <span class="card-decor card-dot" style="top: 22px; right: 54px;"></span>
+                                <span class="card-decor card-dot" style="top: 22px; right: 34px;"></span>
+                                <span class="card-decor card-dot" style="top: 22px; right: 14px;"></span>
+                                <!-- Círculo abajo a la derecha -->
+                                <span class="card-decor card-circle" style="bottom: 16px; right: 16px;"></span>
+                                <!-- Contenido principal -->
+                                <i class="fas fa-bullseye fa-3x mb-3"></i>
+                                <h4 class="card-title">MISIÓN</h4>
+                            </div>
+                            <div class="flip-card-back card-mision">
+                                <p>Somos una empresa de servicios enfocada en obtener soluciones a proyectos de desarrollos productivos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Visión -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card-vision">
+                                <span class="card-decor card-dot" style="top: 22px; left: 32px;"></span>
+                                <span class="card-decor card-dot" style="top: 22px; left: 52px;"></span>
+                                <span class="card-decor card-dot" style="top: 42px; left: 32px;"></span>
+                                <span class="card-decor card-dot" style="top: 42px; left: 52px;"></span>
+                                <span class="card-decor card-circle" style="bottom: 18px; right: 38px;"></span>
+                                <i class="fas fa-eye fa-3x mb-3"></i>
+                                <h4 class="card-title">VISIÓN</h4>
+                            </div>
+                            <div class="flip-card-back card-vision">
+                                <p>Representamos la innovación tecnológica en la agroganadería cuyana, brindamos servicios e insumos ajustados a las necesidades de cada caso en particular para brindar los resultados esperados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Valores -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card-valores">
+                                <span class="card-decor card-dot" style="top: 28px; right: 38px;"></span>
+                                <span class="card-decor card-dot" style="top: 28px; right: 58px;"></span>
+                                <span class="card-decor card-dot" style="top: 28px; right: 78px;"></span>
+                                <span class="card-decor card-circle" style="bottom: 18px; right: 18px;"></span>
+                                <i class="fas fa-handshake fa-3x mb-3"></i>
+                                <h4 class="card-title">VALORES</h4>
+                            </div>
+                            <div class="flip-card-back card-valores">
+                                <p>Nuestra empresa se fundó sobre las bases de la RESPONSABILIDAD Y CONFIANZA en los profesionales que forman parte de nuestro equipo de trabajo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--services-->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                  <h3>Nuestros servicios</h3>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Primer servicio -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                 <!-- Imagen para PC -->
+                    <div class="service-img-card d-none d-md-block">
+                         <img src="images/carta_ganaderia_pc.png" alt="GANADERÍA" class="img-fluid">
+                         <a href="ganaderia.html" class="more-info-btn">Ver más</a>
+                    </div>
+                 <!-- Imagen para móvil -->
+                   <div class="service-img-card d-block d-md-none">
+                      <img src="images/carta_ganaderia_celular.png" alt="GANADERÍA" class="img-fluid">
+                      <a href="ganaderia.html" class="more-info-btn">Ver más</a>
+                    </div>
+                </div>
+    
+                <!-- Segundo servicio -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                 <!-- Imagen para PC -->
+                    <div class="service-img-card d-none d-md-block">
+                         <img src="images/carta_agricultura_pc.png" alt="AGRICULTURA" class="img-fluid">
+                         <a href="agricultura.html" class="more-info-btn">Ver más</a>
+                    </div>
+                 <!-- Imagen para móvil -->
+                   <div class="service-img-card d-block d-md-none">
+                      <img src="images/carta_agricultura_celular.png" alt="AGRICULTURA" class="img-fluid">
+                      <a href="agricultura.html" class="more-info-btn">Ver más</a>
+                    </div>
+                </div>
+    
+                <!-- Tercer servicio -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                 <!-- Imagen para PC -->
+                    <div class="service-img-card d-none d-md-block">
+                         <img src="images/carta_greendrone_pc.png" alt="GREEN-DRONE" class="img-fluid">
+                         <a href="greendrone.html" class="more-info-btn">Ver más</a>
+                    </div>
+                 <!-- Imagen para móvil -->
+                   <div class="service-img-card d-block d-md-none">
+                      <img src="images/carta_greendrone_celular.png" alt="GREEN-DRONE" class="img-fluid">
+                      <a href="greendrone.html" class="more-info-btn">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Cuarto servicio -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                 <!-- Imagen para PC -->
+                    <div class="service-img-card d-none d-md-block">
+                         <img src="images/carta_gestion_pc.png" alt="GESTIÓN" class="img-fluid">
+                         <a href="gestion.html" class="more-info-btn">Ver más</a>
+                    </div>
+                 <!-- Imagen para móvil -->
+                   <div class="service-img-card d-block d-md-none">
+                      <img src="images/carta_gestion_celular.png" alt="GESTIÓN" class="img-fluid">
+                      <a href="gestion.html" class="more-info-btn">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Quinto servicio -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                 <!-- Imagen para PC -->
+                    <div class="service-img-card d-none d-md-block">
+                         <img src="images/carta_bosquenat_pc.png" alt="BOSQUE-NATIVO" class="img-fluid">
+                         <a href="bosquenat.html" class="more-info-btn">Ver más</a>
+                    </div>
+                 <!-- Imagen para móvil -->
+                   <div class="service-img-card d-block d-md-none">
+                      <img src="images/carta_bosquenat_celular.png" alt="BOSQUE-NATIVO" class="img-fluid">
+                      <a href="bosquenat.html" class="more-info-btn">Ver más</a>
+                    </div>
+                </div>
+
+
+                <!-- Sexto servicio -->
+                 <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                 <!-- Imagen para PC -->
+                    <div class="service-img-card d-none d-md-block">
+                         <img src="images/carta_gestambiental_pc.png" alt="GESTION-AMBIENTAL" class="img-fluid">
+                         <a href="gestionambiental.html" class="more-info-btn">Ver más</a>
+                    </div>
+                 <!-- Imagen para móvil -->
+                   <div class="service-img-card d-block d-md-none">
+                      <img src="images/carta_gestambiental_celular.png" alt="GESTION-AMBIENTAL" class="img-fluid">
+                      <a href="gestion.html" class="more-info-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mapa interactivo -->
+<section id="map-interactive">
+    <div class="mt-5 map-container">
+        <hr class="divider">
+        <div class="text-center mb-2">
+         <h3> MAPA INTERACTIVO</h3>
+         <h5>📍 Conocé cómo estamos abarcando la provincia 🌎</h5>
+        </div>
+        <div class="col-12 mt-3">
+         <iframe src="https://www.google.com/maps/d/embed?mid=1BTokVw31P76iAeLFpgN3oNf44RRMyLs&ehbc=2E312F" width="100%" height="520" ></iframe>
+        </div>
+        <hr class="divider">
+    </div>
+</section>
+
+    
+
+    
+    <!--contacto-->
+    <section id="contacto" style="background-color: white !important;">
+        <div class="form-12-content mb-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Columna del formulario -->
+                    <div class="col-12 col-md-6">
+                        <div class="container mt-5"> 
+                            <h2 class="mb-5"><i class="fas fa-envelope icono mr-2"></i> FORMULARIO DE CONTACTO</h2> 
+                            <form action="https://formsubmit.co/santi.charly.becerra@gmail.com" method="POST">
+                                <label class="form-label" for="i_nombre"><i class="fas fa-user mr-2"></i> Nombre *</label> 
+                                <input class="form-control" type="text" id="i_nombre" name="nombre" required> 
+    
+                                <label class="form-label" for="i_correo"><i class="fas fa-envelope mr-2"></i> Correo Electrónico *</label> 
+                                <input class="form-control" type="email" id="i_correo" name="correo" required> 
+    
+                                <label class="form-label" for="i_numtel"><i class="fas fa-phone mr-2"></i> Número de teléfono *</label> 
+                                <input class="form-control" type="number" id="i_numtel" name="numtel" required> 
+    
+                                <label class="form-label" for="mensaje"><i class="fas fa-comment mr-2"></i> Mensaje</label> 
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea> 
+    
+                                <div class="text-center mt-4 mb-5">
+                                    <button class="btn btn-success btn-icon"><i class="fas fa-paper-plane"></i> ENVIAR</button>
+                                    <button class="btn btn-danger btn-icon"><i class="fas fa-trash"></i> CANCELAR</button>
+                                </div> 
+                            </form> 
+                        </div>
+                    </div>
+    
+                    <!-- Columna con dirección, teléfono y ubicación -->
+                    <div class="col-12 col-md-6 d-flex align-items-center">
+                        <div class="container">
+                             <div class="contact-info">
+                                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/NagXeF5w1yVNHkFS7" target="_blank">Remedios de Escalada 86, Villa Mercedes, San Luis, Argentina</a></p>
+                                    <p><i class="fas fa-phone-alt"></i> <a href="https://wa.me/+5492657719499">+54 9 2657 71-9499</a></p>
+                                    <p><i class="fas fa-envelope mr-2"></i> <a href="mailto:consultoriaagronomicavm@gmail.com">consultoriaagronomicavm@gmail.com</a></p>
+                             </div>
+                          </div>
+                        </div>
+                 </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--footer-->
+<section class="tank-footer-29-main " id="footer">
+    <div class="footer-29 text-center">
+        <div class="container">
+            <div class="main-social-footer-35">
+                <a href="https://wa.me/+5492657719499" class="whatsapp" title="Contact us on WhatsApp"><i class='fab fa-whatsapp'></i></a>
+                <a href="mailto:consultoriaagronomicavm@gmail.com" title="Email us at consultoriaagronomicavm@gmail.com"><i class='fab fa-google'></i></a>
+                <a href="https://www.facebook.com/rodrigo.becerra.921/" title="Visit our Facebook page"><i class='fab fa-facebook'></i></a>
+                <a href="https://www.instagram.com/consultoriaagronomica_?igsh=ZjlpcWxvajM3Mmhw" class="instagram" title="Visit our Instagram page"><i class='fab fa-instagram'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-copies text-center">
+        <p class="copy-footer-29">&copy; 2025 <a href="#navbar"> Consultoría Agronómica</a></p>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
